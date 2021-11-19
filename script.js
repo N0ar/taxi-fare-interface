@@ -206,6 +206,7 @@ const predict = () => {
       .then(data => {
         document.getElementById('fare').classList.remove('d-none');
         const fareResult = document.getElementById('predicted-fare');
+        // changer le terme si besoin en fonction de l'api
         const fare = Math.round(data['Prediction'] * 100) / 100
         fareResult.innerText = `$${fare}`;
       })
